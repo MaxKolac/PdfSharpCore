@@ -27,10 +27,8 @@
 // DEALINGS IN THE SOFTWARE.
 #endregion
 
-using System;
-using System.Diagnostics;
-using System.IO;
 using PdfSharpCore.Pdf.IO;
+using System.IO;
 
 namespace PdfSharpCore.Pdf.Advanced
 {

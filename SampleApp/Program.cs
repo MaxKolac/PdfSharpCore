@@ -1,11 +1,11 @@
 ﻿
-namespace SampleApp 
+namespace SampleApp
 {
 
 
     public class Program
     {
-        
+
 
         private static string GetOutFilePath(string name)
         {

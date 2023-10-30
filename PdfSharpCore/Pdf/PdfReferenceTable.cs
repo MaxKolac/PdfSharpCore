@@ -27,12 +27,12 @@
 // DEALINGS IN THE SOFTWARE.
 #endregion
 
-using System;
-using System.Diagnostics;
-using System.Collections;
-using System.Collections.Generic;
 using PdfSharpCore.Pdf.Advanced;
 using PdfSharpCore.Pdf.IO;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace PdfSharpCore.Pdf
 {
@@ -72,7 +72,7 @@ namespace PdfSharpCore.Pdf
 
             if (ObjectTable.ContainsKey(iref.ObjectID))
                 return;
-                // throw new InvalidOperationException("Object already in table.");
+            // throw new InvalidOperationException("Object already in table.");
 
             ObjectTable.Add(iref.ObjectID, iref);
         }
@@ -93,7 +93,7 @@ namespace PdfSharpCore.Pdf
 
             if (ObjectTable.ContainsKey(value.ObjectID))
                 return;
-                // throw new InvalidOperationException("Object already in table.");
+            // throw new InvalidOperationException("Object already in table.");
 
             ObjectTable.Add(value.ObjectID, value.Reference);
         }

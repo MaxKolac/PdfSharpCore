@@ -27,10 +27,10 @@
 // DEALINGS IN THE SOFTWARE.
 #endregion
 
-using System;
-using System.Collections.Generic;
 using PdfSharpCore.Drawing.Layout.enums;
 using PdfSharpCore.Pdf.IO;
+using System;
+using System.Collections.Generic;
 
 namespace PdfSharpCore.Drawing.Layout
 {

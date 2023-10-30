@@ -27,82 +27,80 @@
 // DEALINGS IN THE SOFTWARE.
 #endregion
 
-using System;
-using System.Diagnostics;
 using PdfSharpCore.Drawing;
 
 namespace PdfSharpCore.Charting.Renderers
 {
-  /// <summary>
-  /// Represents the necessary data for chart rendering.
-  /// </summary>
-  internal class RendererParameters
-  {
     /// <summary>
-    /// Initializes a new instance of the RendererParameters class.
+    /// Represents the necessary data for chart rendering.
     /// </summary>
-    public RendererParameters()
+    internal class RendererParameters
     {
-    }
+        /// <summary>
+        /// Initializes a new instance of the RendererParameters class.
+        /// </summary>
+        public RendererParameters()
+        {
+        }
 
-    /// <summary>
-    /// Initializes a new instance of the RendererParameters class with the specified graphics and
-    /// coordinates.
-    /// </summary>
-    public RendererParameters(XGraphics gfx, double x, double y, double width, double height)
-    {
-      this.gfx = gfx;
-      this.box = new XRect(x, y, width, height);
-    }
+        /// <summary>
+        /// Initializes a new instance of the RendererParameters class with the specified graphics and
+        /// coordinates.
+        /// </summary>
+        public RendererParameters(XGraphics gfx, double x, double y, double width, double height)
+        {
+            this.gfx = gfx;
+            this.box = new XRect(x, y, width, height);
+        }
 
-    /// <summary>
-    /// Initializes a new instance of the RendererParameters class with the specified graphics and
-    /// rectangle.
-    /// </summary>
-    public RendererParameters(XGraphics gfx, XRect boundingBox)
-    {
-      this.gfx = gfx;
-      this.box = boundingBox;
-    }
+        /// <summary>
+        /// Initializes a new instance of the RendererParameters class with the specified graphics and
+        /// rectangle.
+        /// </summary>
+        public RendererParameters(XGraphics gfx, XRect boundingBox)
+        {
+            this.gfx = gfx;
+            this.box = boundingBox;
+        }
 
-    /// <summary>
-    /// Gets or sets the graphics object.
-    /// </summary>
-    public XGraphics Graphics
-    {
-      get {return this.gfx;}
-      set {this.gfx = value;}
-    }
-    XGraphics gfx;
+        /// <summary>
+        /// Gets or sets the graphics object.
+        /// </summary>
+        public XGraphics Graphics
+        {
+            get { return this.gfx; }
+            set { this.gfx = value; }
+        }
+        XGraphics gfx;
 
-    /// <summary>
-    /// Gets or sets the item to draw.
-    /// </summary>
-    public object DrawingItem
-    {
-      get {return this.item;}
-      set {this.item = value;}
-    }
-    object item;
+        /// <summary>
+        /// Gets or sets the item to draw.
+        /// </summary>
+        public object DrawingItem
+        {
+            get { return this.item; }
+            set { this.item = value; }
+        }
+        object item;
 
-    /// <summary>
-    /// Gets or sets the rectangle for the drawing item.
-    /// </summary>
-    public XRect Box
-    {
-      get {return this.box;}
-      set {this.box = value;}
-    }
-    XRect box;
+        /// <summary>
+        /// Gets or sets the rectangle for the drawing item.
+        /// </summary>
+        public XRect Box
+        {
+            get { return this.box; }
+            set { this.box = value; }
+        }
+        XRect box;
 
-    /// <summary>
-    /// Gets or sets the RendererInfo.
-    /// </summary>
-    public RendererInfo RendererInfo
-    {
-      get {return this.rendererInfo;}
-      set {this.rendererInfo = value;}
+        /// <summary>
+        /// Gets or sets the RendererInfo.
+        /// </summary>
+        public RendererInfo RendererInfo
+        {
+            get { return this.rendererInfo; }
+            set { this.rendererInfo = value; }
+        }
+        RendererInfo rendererInfo;
     }
-    RendererInfo rendererInfo;
-  }
 }

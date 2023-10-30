@@ -27,16 +27,16 @@
 // DEALINGS IN THE SOFTWARE.
 #endregion
 
-using System;
-using System.Diagnostics;
-using System.Globalization;
-using System.IO;
-using System.Linq;
 using PdfSharpCore.Exceptions;
 using PdfSharpCore.Internal;
 using PdfSharpCore.Pdf.Advanced;
 using PdfSharpCore.Pdf.Internal;
 using PdfSharpCore.Pdf.IO.enums;
+using System;
+using System.Diagnostics;
+using System.Globalization;
+using System.IO;
+using System.Linq;
 
 namespace PdfSharpCore.Pdf.IO
 {
@@ -672,7 +672,7 @@ namespace PdfSharpCore.Pdf.IO
         {
             if (symbol == Symbol.EndStream)
             {
-                Skip:
+            Skip:
                 char ch = _lexer.MoveToNonWhiteSpace();
                 if (ch != 'e' && ch != Chars.EOF)
                 {
@@ -1162,7 +1162,7 @@ namespace PdfSharpCore.Pdf.IO
                                     idToUse = idChecked;
                                 else
                                     if (accuracy == PdfReadAccuracy.Strict)
-                                        ParserDiagnostics.ThrowParserException("Invalid entry in XRef table, ID=" + id + ", Generation=" + generation + ", Position=" + position + ", ID of referenced object=" + idChecked + ", Generation of referenced object=" + generationChecked);
+                                    ParserDiagnostics.ThrowParserException("Invalid entry in XRef table, ID=" + id + ", Generation=" + generation + ", Position=" + position + ", ID of referenced object=" + idChecked + ", Generation of referenced object=" + generationChecked);
                             }
 
                             // Even it is restricted, an object can exists in more than one subsection.
@@ -1361,7 +1361,7 @@ namespace PdfSharpCore.Pdf.IO
                             //// (PDF Reference Implementation Notes 15).
 
                             int position = (int)item.Field2;
-                                objectID = ReadObjectNumber(position);
+                            objectID = ReadObjectNumber(position);
 #if DEBUG
                             if (objectID.ObjectNumber == 1074)
                                 GetType();

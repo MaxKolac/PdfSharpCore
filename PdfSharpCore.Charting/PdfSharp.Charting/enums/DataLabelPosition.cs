@@ -27,33 +27,32 @@
 // DEALINGS IN THE SOFTWARE.
 #endregion
 
-using System;
 
 namespace PdfSharpCore.Charting
 {
-  /// <summary>
-  /// Determines where the data label will be positioned.
-  /// </summary>
-  public enum DataLabelPosition
-  {
     /// <summary>
-    /// DataLabel will be centered inside the bar or pie.
+    /// Determines where the data label will be positioned.
     /// </summary>
-    Center,
+    public enum DataLabelPosition
+    {
+        /// <summary>
+        /// DataLabel will be centered inside the bar or pie.
+        /// </summary>
+        Center,
 
-    /// <summary>
-    /// Inside the bar or pie at the origin.
-    /// </summary>
-    InsideBase,
+        /// <summary>
+        /// Inside the bar or pie at the origin.
+        /// </summary>
+        InsideBase,
 
-    /// <summary>
-    /// Inside the bar or pie at the edge.
-    /// </summary>
-    InsideEnd,
+        /// <summary>
+        /// Inside the bar or pie at the edge.
+        /// </summary>
+        InsideEnd,
 
-    /// <summary>
-    /// Outside the bar or pie.
-    /// </summary>
-    OutsideEnd
-  }
+        /// <summary>
+        /// Outside the bar or pie.
+        /// </summary>
+        OutsideEnd
+    }
 }

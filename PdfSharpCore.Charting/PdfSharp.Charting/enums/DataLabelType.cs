@@ -27,28 +27,27 @@
 // DEALINGS IN THE SOFTWARE.
 #endregion
 
-using System;
 
 namespace PdfSharpCore.Charting
 {
-  /// <summary>
-  /// Determines the type of the data label.
-  /// </summary>
-  public enum DataLabelType
-  {
     /// <summary>
-    /// No DataLabel.
+    /// Determines the type of the data label.
     /// </summary>
-    None,
+    public enum DataLabelType
+    {
+        /// <summary>
+        /// No DataLabel.
+        /// </summary>
+        None,
 
-    /// <summary>
-    /// Percentage of the data. For pie charts only.
-    /// </summary>
-    Percent,
+        /// <summary>
+        /// Percentage of the data. For pie charts only.
+        /// </summary>
+        Percent,
 
-    /// <summary>
-    /// Value of the data.
-    /// </summary>
-    Value
-  }
+        /// <summary>
+        /// Value of the data.
+        /// </summary>
+        Value
+    }
 }

@@ -27,13 +27,13 @@
 // DEALINGS IN THE SOFTWARE.
 #endregion
 
+using PdfSharpCore.Pdf.Advanced;
+using PdfSharpCore.Pdf.Internal;
+using PdfSharpCore.Pdf.IO;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Security.Cryptography;
-using PdfSharpCore.Pdf.IO;
-using PdfSharpCore.Pdf.Advanced;
-using PdfSharpCore.Pdf.Internal;
 
 #pragma warning disable 0169
 #pragma warning disable 0649
@@ -377,7 +377,7 @@ namespace PdfSharpCore.Pdf.Security
                 }
             }
             Array.Copy(digest, 0, _encryptionKey, 0, _encryptionKey.Length);
-       }
+        }
 
         /// <summary>
         /// Computes the user key.

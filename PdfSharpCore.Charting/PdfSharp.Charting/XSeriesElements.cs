@@ -27,59 +27,56 @@
 // DEALINGS IN THE SOFTWARE.
 #endregion
 
-using System;
-using System.Collections;
-using PdfSharpCore.Drawing;
 
 namespace PdfSharpCore.Charting
 {
-  /// <summary>
-  /// Represents the collection of the value in an XSeries.
-  /// </summary>
-  public class XSeriesElements : DocumentObjectCollection
-  {
     /// <summary>
-    /// Initializes a new instance of the XSeriesElements class.
+    /// Represents the collection of the value in an XSeries.
     /// </summary>
-    public XSeriesElements()
+    public class XSeriesElements : DocumentObjectCollection
     {
-    }
+        /// <summary>
+        /// Initializes a new instance of the XSeriesElements class.
+        /// </summary>
+        public XSeriesElements()
+        {
+        }
 
-    #region Methods
-    /// <summary>
-    /// Creates a deep copy of this object.
-    /// </summary>
-    public new XSeriesElements Clone()
-    {
-      return (XSeriesElements)base.DeepCopy();
-    }
+        #region Methods
+        /// <summary>
+        /// Creates a deep copy of this object.
+        /// </summary>
+        public new XSeriesElements Clone()
+        {
+            return (XSeriesElements)base.DeepCopy();
+        }
 
-    /// <summary>
-    /// Adds a blank to the XSeries.
-    /// </summary>
-    public void AddBlank()
-    {
-      base.Add((DocumentObject)null);
-    }
+        /// <summary>
+        /// Adds a blank to the XSeries.
+        /// </summary>
+        public void AddBlank()
+        {
+            base.Add((DocumentObject)null);
+        }
 
-    /// <summary>
-    /// Adds a value to the XSeries.
-    /// </summary>
-    public XValue Add(string value)
-    {
-      XValue xValue = new XValue(value);
-      Add(xValue);
-      return xValue;
-    }
+        /// <summary>
+        /// Adds a value to the XSeries.
+        /// </summary>
+        public XValue Add(string value)
+        {
+            XValue xValue = new XValue(value);
+            Add(xValue);
+            return xValue;
+        }
 
-    /// <summary>
-    /// Adds an array of values to the XSeries.
-    /// </summary>
-    public void Add(params string[] values)
-    {
-      foreach (string val in values)
-        this.Add(val);
+        /// <summary>
+        /// Adds an array of values to the XSeries.
+        /// </summary>
+        public void Add(params string[] values)
+        {
+            foreach (string val in values)
+                this.Add(val);
+        }
+        #endregion
     }
-    #endregion
-  }
 }

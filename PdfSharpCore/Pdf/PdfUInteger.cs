@@ -27,10 +27,10 @@
 // DEALINGS IN THE SOFTWARE.
 #endregion
 
+using PdfSharpCore.Pdf.IO;
 using System;
 using System.Diagnostics;
 using System.Globalization;
-using PdfSharpCore.Pdf.IO;
 
 namespace PdfSharpCore.Pdf
 {

@@ -27,15 +27,15 @@
 // DEALINGS IN THE SOFTWARE.
 #endregion
 
+using PdfSharpCore.Pdf.AcroForms;
+using PdfSharpCore.Pdf.Advanced;
+using PdfSharpCore.Pdf.Internal;
+using PdfSharpCore.Pdf.IO;
+using PdfSharpCore.Pdf.Security;
 using System;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using PdfSharpCore.Pdf.Advanced;
-using PdfSharpCore.Pdf.Internal;
-using PdfSharpCore.Pdf.IO;
-using PdfSharpCore.Pdf.AcroForms;
-using PdfSharpCore.Pdf.Security;
 
 // ReSharper disable ConvertPropertyToExpressionBody
 

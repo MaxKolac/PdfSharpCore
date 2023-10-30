@@ -27,15 +27,15 @@
 // DEALINGS IN THE SOFTWARE.
 #endregion
 
-using System;
-using System.Globalization;
-using System.Diagnostics;
-using System.Text;
-using System.IO;
 using PdfSharpCore.Internal;
 using PdfSharpCore.Pdf.Internal;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Globalization;
+using System.IO;
 using System.Linq;
+using System.Text;
 
 namespace PdfSharpCore.Pdf.IO
 {
@@ -534,9 +534,9 @@ namespace PdfSharpCore.Pdf.IO
                 ch = ScanNextChar(false);
             }
 
-            // Phase 2: deal with UTF-16BE if necessary.
-            // UTF-16BE Unicode strings start with U+FEFF ("þÿ"). There can be empty strings with UTF-16BE prefix.
-            Phase2:
+        // Phase 2: deal with UTF-16BE if necessary.
+        // UTF-16BE Unicode strings start with U+FEFF ("þÿ"). There can be empty strings with UTF-16BE prefix.
+        Phase2:
             if (_token.Length >= 2 && _token[0] == '\xFE' && _token[1] == '\xFF')
             {
                 // Combine two ANSI characters to get one Unicode character.
@@ -762,32 +762,32 @@ namespace PdfSharpCore.Pdf.IO
             }
             return _currChar;
         }
-// #if DEBUG
-//         public string SurroundingsOfCurrentPosition(bool hex)
-//         {
-//             const int range = 20;
-//             int start = Math.Max(Position - range, 0);
-//             int length = Math.Min(2 * range, PdfLength - start);
-//             long posOld = _pdfSteam.Position;
-//             _pdfSteam.Position = start;
-//             byte[] bytes = new byte[length];
-//             _pdfSteam.Read(bytes, 0, length);
-//             _pdfSteam.Position = posOld;
-//             string result = "";
-//             if (hex)
-//             {
-//                 for (int idx = 0; idx < length; idx++)
-//                     result += ((int)bytes[idx]).ToString("x2");
-//                 //result += string.Format("{0:", (int) bytes[idx]);
-//             }
-//             else
-//             {
-//                 for (int idx = 0; idx < length; idx++)
-//                     result += (char)bytes[idx];
-//             }
-//             return result;
-//         }
-// #endif
+        // #if DEBUG
+        //         public string SurroundingsOfCurrentPosition(bool hex)
+        //         {
+        //             const int range = 20;
+        //             int start = Math.Max(Position - range, 0);
+        //             int length = Math.Min(2 * range, PdfLength - start);
+        //             long posOld = _pdfSteam.Position;
+        //             _pdfSteam.Position = start;
+        //             byte[] bytes = new byte[length];
+        //             _pdfSteam.Read(bytes, 0, length);
+        //             _pdfSteam.Position = posOld;
+        //             string result = "";
+        //             if (hex)
+        //             {
+        //                 for (int idx = 0; idx < length; idx++)
+        //                     result += ((int)bytes[idx]).ToString("x2");
+        //                 //result += string.Format("{0:", (int) bytes[idx]);
+        //             }
+        //             else
+        //             {
+        //                 for (int idx = 0; idx < length; idx++)
+        //                     result += (char)bytes[idx];
+        //             }
+        //             return result;
+        //         }
+        // #endif
 
         /// <summary>
         /// Gets the current symbol.

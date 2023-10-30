@@ -30,24 +30,23 @@
 // DEALINGS IN THE SOFTWARE.
 #endregion
 
-using System;
 
 namespace MigraDocCore.DocumentObjectModel
 {
-  /// <summary>
-  /// Specifies the level of a paragraph.
-  /// </summary>
-  public enum OutlineLevel
-  {
-    BodyText,
-    Level1,
-    Level2,
-    Level3,
-    Level4,
-    Level5,
-    Level6,
-    Level7,
-    Level8,
-    Level9,
-  }
+    /// <summary>
+    /// Specifies the level of a paragraph.
+    /// </summary>
+    public enum OutlineLevel
+    {
+        BodyText,
+        Level1,
+        Level2,
+        Level3,
+        Level4,
+        Level5,
+        Level6,
+        Level7,
+        Level8,
+        Level9,
+    }
 }

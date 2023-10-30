@@ -30,24 +30,23 @@
 // DEALINGS IN THE SOFTWARE.
 #endregion
 
-using System;
 
 namespace MigraDocCore.DocumentObjectModel.Shapes.Charts
 {
-  /// <summary>
-  /// Symbols of a data point in a line chart.
-  /// </summary>
-  public enum MarkerStyle
-  {
-    None,
-    Circle,
-    Dash,
-    Diamond,
-    Dot,
-    Plus,
-    Square,
-    Star,
-    Triangle,
-    X
-  }
+    /// <summary>
+    /// Symbols of a data point in a line chart.
+    /// </summary>
+    public enum MarkerStyle
+    {
+        None,
+        Circle,
+        Dash,
+        Diamond,
+        Dot,
+        Plus,
+        Square,
+        Star,
+        Triangle,
+        X
+    }
 }

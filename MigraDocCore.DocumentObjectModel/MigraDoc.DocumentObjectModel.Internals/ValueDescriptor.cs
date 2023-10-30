@@ -31,10 +31,7 @@
 #endregion
 
 using System;
-using System.ComponentModel;
-using System.Collections;
 using System.Diagnostics;
-using System.Globalization;
 using System.Reflection;
 
 namespace MigraDocCore.DocumentObjectModel.Internals
@@ -45,11 +42,11 @@ namespace MigraDocCore.DocumentObjectModel.Internals
     public abstract class ValueDescriptor
     {
         internal ValueDescriptor(
-            string valueName, 
+            string valueName,
             [System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicParameterlessConstructor)]
-            Type valueType, 
-            Type memberType, 
-            MemberInfo memberInfo, 
+            Type valueType,
+            Type memberType,
+            MemberInfo memberInfo,
             VDFlags flags
         )
         {
@@ -63,7 +60,7 @@ namespace MigraDocCore.DocumentObjectModel.Internals
         public object CreateValue()
         {
             ConstructorInfo constructorInfoObj = ValueType.GetConstructor(Type.EmptyTypes);
-            
+
             return constructorInfoObj.Invoke(null);
         }
 
@@ -79,7 +76,7 @@ namespace MigraDocCore.DocumentObjectModel.Internals
                 flags |= VDFlags.RefOnly;
 
             string name = memberInfo.Name;
-             
+
             Type type;
             if (memberInfo is FieldInfo)
                 type = ((FieldInfo)memberInfo).FieldType;
@@ -169,7 +166,7 @@ namespace MigraDocCore.DocumentObjectModel.Internals
     /// </summary>
     internal class NullableDescriptor : ValueDescriptor
     {
-        internal NullableDescriptor(string valueName, [System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicParameterlessConstructor)]Type valueType, Type fieldType, MemberInfo memberInfo, VDFlags flags)
+        internal NullableDescriptor(string valueName, [System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicParameterlessConstructor)] Type valueType, Type fieldType, MemberInfo memberInfo, VDFlags flags)
           : base(valueName, valueType, fieldType, memberInfo, flags)
         {
         }
@@ -178,7 +175,7 @@ namespace MigraDocCore.DocumentObjectModel.Internals
         {
             if (!Enum.IsDefined(typeof(GV), flags))
                 throw new ArgumentException("flags");
-           // throw new InvalidEnumArgumentException("flags", (int)flags, typeof(GV));
+            // throw new InvalidEnumArgumentException("flags", (int)flags, typeof(GV));
 
             object val;
             if (FieldInfo != null)
@@ -250,7 +247,7 @@ namespace MigraDocCore.DocumentObjectModel.Internals
     /// </summary>
     internal class ValueTypeDescriptor : ValueDescriptor
     {
-        internal ValueTypeDescriptor(string valueName, [System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicParameterlessConstructor)]Type valueType, Type fieldType, MemberInfo memberInfo, VDFlags flags)
+        internal ValueTypeDescriptor(string valueName, [System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicParameterlessConstructor)] Type valueType, Type fieldType, MemberInfo memberInfo, VDFlags flags)
           :
           base(valueName, valueType, fieldType, memberInfo, flags)
         {
@@ -260,7 +257,7 @@ namespace MigraDocCore.DocumentObjectModel.Internals
         {
             if (!Enum.IsDefined(typeof(GV), flags))
                 throw new ArgumentException("flags");
-                //throw new InvalidEnumArgumentException("flags", (int)flags, typeof(GV));
+            //throw new InvalidEnumArgumentException("flags", (int)flags, typeof(GV));
 
             object val;
             if (FieldInfo != null)
@@ -325,7 +322,7 @@ namespace MigraDocCore.DocumentObjectModel.Internals
     /// </summary>
     internal class DocumentObjectDescriptor : ValueDescriptor
     {
-        internal DocumentObjectDescriptor(string valueName, [System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicParameterlessConstructor)]Type valueType, Type fieldType, MemberInfo memberInfo, VDFlags flags)
+        internal DocumentObjectDescriptor(string valueName, [System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicParameterlessConstructor)] Type valueType, Type fieldType, MemberInfo memberInfo, VDFlags flags)
           :
           base(valueName, valueType, fieldType, memberInfo, flags)
         {
@@ -426,7 +423,7 @@ namespace MigraDocCore.DocumentObjectModel.Internals
     /// </summary>
     internal class DocumentObjectCollectionDescriptor : ValueDescriptor
     {
-        internal DocumentObjectCollectionDescriptor(string valueName, [System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicParameterlessConstructor)]Type valueType, Type fieldType, MemberInfo memberInfo, VDFlags flags)
+        internal DocumentObjectCollectionDescriptor(string valueName, [System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicParameterlessConstructor)] Type valueType, Type fieldType, MemberInfo memberInfo, VDFlags flags)
           :
           base(valueName, valueType, fieldType, memberInfo, flags)
         {
@@ -436,7 +433,7 @@ namespace MigraDocCore.DocumentObjectModel.Internals
         {
             if (!Enum.IsDefined(typeof(GV), flags))
                 throw new ArgumentException("flags");
-                //throw new InvalidEnumArgumentException("flags", (int)flags, typeof(GV));
+            //throw new InvalidEnumArgumentException("flags", (int)flags, typeof(GV));
 
             Debug.Assert(this.memberInfo is FieldInfo, "Properties of DocumentObjectCollection not allowed.");
             DocumentObjectCollection val = FieldInfo.GetValue(dom) as DocumentObjectCollection;

@@ -27,16 +27,16 @@
 // DEALINGS IN THE SOFTWARE.
 #endregion
 
+using PdfSharpCore.Exceptions;
+using PdfSharpCore.Internal;
+using PdfSharpCore.Pdf.Advanced;
+using PdfSharpCore.Pdf.Internal;
+using PdfSharpCore.Pdf.IO.enums;
+using PdfSharpCore.Pdf.Security;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using PdfSharpCore.Exceptions;
-using PdfSharpCore.Pdf.Advanced;
-using PdfSharpCore.Pdf.Security;
-using PdfSharpCore.Pdf.Internal;
-using PdfSharpCore.Internal;
-using PdfSharpCore.Pdf.IO.enums;
 
 namespace PdfSharpCore.Pdf.IO
 {

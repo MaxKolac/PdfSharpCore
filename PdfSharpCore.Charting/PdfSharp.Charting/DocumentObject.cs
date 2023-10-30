@@ -27,62 +27,61 @@
 // DEALINGS IN THE SOFTWARE.
 #endregion
 
-using System;
 
 namespace PdfSharpCore.Charting
 {
-  /// <summary>
-  /// Base class for all chart classes.
-  /// </summary>
-  public class DocumentObject
-  {
     /// <summary>
-    /// Initializes a new instance of the DocumentObject class.
+    /// Base class for all chart classes.
     /// </summary>
-    public DocumentObject()
+    public class DocumentObject
     {
-    }
+        /// <summary>
+        /// Initializes a new instance of the DocumentObject class.
+        /// </summary>
+        public DocumentObject()
+        {
+        }
 
-    /// <summary>
-    /// Initializes a new instance of the DocumentObject class with the specified parent.
-    /// </summary>
-    public DocumentObject(DocumentObject parent)
-    {
-      this.parent = parent;
-    }
+        /// <summary>
+        /// Initializes a new instance of the DocumentObject class with the specified parent.
+        /// </summary>
+        public DocumentObject(DocumentObject parent)
+        {
+            this.parent = parent;
+        }
 
-    #region Methods
-    /// <summary>
-    /// Creates a deep copy of the DocumentObject. The parent of the new object is null.
-    /// </summary>
-    public object Clone()
-    {
-      return DeepCopy();
-    }
+        #region Methods
+        /// <summary>
+        /// Creates a deep copy of the DocumentObject. The parent of the new object is null.
+        /// </summary>
+        public object Clone()
+        {
+            return DeepCopy();
+        }
 
-    /// <summary>
-    /// Implements the deep copy of the object.
-    /// </summary>
-    protected virtual object DeepCopy()
-    {
-      DocumentObject value = (DocumentObject)MemberwiseClone();
-      value.parent = null;
-      return value;
-    }
-    #endregion
+        /// <summary>
+        /// Implements the deep copy of the object.
+        /// </summary>
+        protected virtual object DeepCopy()
+        {
+            DocumentObject value = (DocumentObject)MemberwiseClone();
+            value.parent = null;
+            return value;
+        }
+        #endregion
 
-    #region Properties
-    /// <summary>
-    /// Gets the parent object.
-    /// </summary>
-    public DocumentObject Parent
-    {
-      get {return this.parent;}
+        #region Properties
+        /// <summary>
+        /// Gets the parent object.
+        /// </summary>
+        public DocumentObject Parent
+        {
+            get { return this.parent; }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        protected internal DocumentObject parent;
+        #endregion
     }
-    /// <summary>
-    /// 
-    /// </summary>
-    protected internal DocumentObject parent;
-    #endregion
-  }
 }

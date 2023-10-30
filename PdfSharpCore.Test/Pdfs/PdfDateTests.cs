@@ -1,6 +1,6 @@
-﻿using System;
-using FluentAssertions;
+﻿using FluentAssertions;
 using PdfSharpCore.Pdf;
+using System;
 using Xunit;
 
 namespace PdfSharpCore.Test.Pdfs

@@ -27,10 +27,10 @@
 // DEALINGS IN THE SOFTWARE.
 #endregion
 
-using System;
 using PdfSharpCore.Internal;
 using PdfSharpCore.Pdf;
 using PdfSharpCore.Utils;
+using System;
 
 namespace PdfSharpCore.Fonts
 {
@@ -55,13 +55,13 @@ namespace PdfSharpCore.Fonts
         /// </summary>
         public static IFontResolver FontResolver
         {
-            get 
+            get
             {
                 try
                 {
                     Lock.EnterFontFactory();
                     if (_fontResolver == null) FontResolver = new FontResolver();
-                        return _fontResolver;
+                    return _fontResolver;
                 }
                 finally { Lock.ExitFontFactory(); }
             }

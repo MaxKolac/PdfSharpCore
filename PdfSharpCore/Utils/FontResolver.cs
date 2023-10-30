@@ -1,21 +1,19 @@
 ﻿
-using System.Linq;
-using System.Diagnostics;
-using System.Diagnostics.CodeAnalysis;
-using System.Collections.Generic;
-
-using PdfSharpCore.Internal;
 using PdfSharpCore.Drawing;
 using PdfSharpCore.Fonts;
-
+using PdfSharpCore.Internal;
 using SixLabors.Fonts;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
+using System.Linq;
 
 
 namespace PdfSharpCore.Utils
 {
 
 
-    public class FontResolver 
+    public class FontResolver
         : IFontResolver
     {
         public string DefaultFontName => "Arial";
@@ -59,7 +57,7 @@ namespace PdfSharpCore.Utils
                 fontPaths.AddRange(systemFontPaths);
 
                 var appdataFontDir = System.Environment.ExpandEnvironmentVariables(@"%LOCALAPPDATA%\Microsoft\Windows\Fonts");
-                if(System.IO.Directory.Exists(appdataFontDir))
+                if (System.IO.Directory.Exists(appdataFontDir))
                 {
                     var appdataFontPaths = System.IO.Directory.GetFiles(appdataFontDir, "*.ttf", System.IO.SearchOption.AllDirectories);
                     fontPaths.AddRange(appdataFontPaths);

@@ -27,8 +27,8 @@
 // DEALINGS IN THE SOFTWARE.
 #endregion
 
-using System;
 using PdfSharpCore.Drawing;
+using System;
 
 namespace PdfSharpCore.Pdf.Annotations
 {

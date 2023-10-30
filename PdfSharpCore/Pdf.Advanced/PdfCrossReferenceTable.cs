@@ -27,11 +27,11 @@
 // DEALINGS IN THE SOFTWARE.
 #endregion
 
+using PdfSharpCore.Pdf.IO;
 using System;
-using System.Diagnostics;
 using System.Collections;
 using System.Collections.Generic;
-using PdfSharpCore.Pdf.IO;
+using System.Diagnostics;
 
 namespace PdfSharpCore.Pdf.Advanced
 {
@@ -93,7 +93,7 @@ namespace PdfSharpCore.Pdf.Advanced
 
             if (ObjectTable.ContainsKey(value.ObjectID))
                 return;
-                // throw new InvalidOperationException("Object already in table.");
+            // throw new InvalidOperationException("Object already in table.");
 
             ObjectTable.Add(value.ObjectID, value.Reference);
         }

@@ -30,11 +30,10 @@
 // DEALINGS IN THE SOFTWARE.
 #endregion
 
+using MigraDocCore.DocumentObjectModel.Internals;
 using System;
 using System.Diagnostics;
 using System.IO;
-using MigraDocCore.DocumentObjectModel.Internals;
-using MigraDocCore.DocumentObjectModel.MigraDoc.DocumentObjectModel.Shapes;
 using static MigraDocCore.DocumentObjectModel.MigraDoc.DocumentObjectModel.Shapes.ImageSource;
 
 namespace MigraDocCore.DocumentObjectModel.Shapes

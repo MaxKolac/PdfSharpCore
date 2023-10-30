@@ -27,9 +27,9 @@
 // DEALINGS IN THE SOFTWARE.
 #endregion
 
-using System;
-using PdfSharpCore.Pdf.IO;
 using PdfSharpCore.Pdf.AcroForms;
+using PdfSharpCore.Pdf.IO;
+using System;
 
 namespace PdfSharpCore.Pdf.Advanced
 {
@@ -141,7 +141,7 @@ namespace PdfSharpCore.Pdf.Advanced
         {
             get
             {
-               if (_outline == null)
+                if (_outline == null)
                 {
                     ////// Ensure that the page tree exists.
                     ////// ReSharper disable once UnusedVariable because we need dummy to call the getter.
@@ -150,7 +150,7 @@ namespace PdfSharpCore.Pdf.Advanced
                     // Now create the outline item tree.
                     _outline = (PdfOutline)Elements.GetValue(Keys.Outlines, VCF.CreateIndirect);
                 }
-               return _outline.Outlines;
+                return _outline.Outlines;
             }
         }
         PdfOutline _outline;

@@ -30,17 +30,16 @@
 // DEALINGS IN THE SOFTWARE.
 #endregion
 
-using System;
 
 namespace MigraDocCore.DocumentObjectModel.Tables
 {
-  /// <summary>
-  /// Specifies the calculation rule of the row height.
-  /// </summary>
-  public enum RowHeightRule
-  {
-    AtLeast,
-    Auto,
-    Exactly
-  }
+    /// <summary>
+    /// Specifies the calculation rule of the row height.
+    /// </summary>
+    public enum RowHeightRule
+    {
+        AtLeast,
+        Auto,
+        Exactly
+    }
 }

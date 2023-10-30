@@ -27,103 +27,101 @@
 // DEALINGS IN THE SOFTWARE.
 #endregion
 
-using System;
 using System.Collections;
-using PdfSharpCore.Drawing;
 
 namespace PdfSharpCore.Charting
 {
-  /// <summary>
-  /// Represents a series of data on the X-Axis.
-  /// </summary>
-  public class XSeries : ChartObject
-  {
     /// <summary>
-    /// Initializes a new instance of the XSeries class.
+    /// Represents a series of data on the X-Axis.
     /// </summary>
-    public XSeries()
+    public class XSeries : ChartObject
     {
-      xSeriesElements = new XSeriesElements();
-    }
+        /// <summary>
+        /// Initializes a new instance of the XSeries class.
+        /// </summary>
+        public XSeries()
+        {
+            xSeriesElements = new XSeriesElements();
+        }
 
-    /// <summary>
-    /// Gets the xvalue at the specified index.
-    /// </summary>
-    public XValue this[int index]
-    {
-      get {return (XValue)this.xSeriesElements[index];}
-    }
+        /// <summary>
+        /// Gets the xvalue at the specified index.
+        /// </summary>
+        public XValue this[int index]
+        {
+            get { return (XValue)this.xSeriesElements[index]; }
+        }
 
-    /// <summary>
-    /// The actual value container of the XSeries.
-    /// </summary>
-    protected XSeriesElements xSeriesElements;
+        /// <summary>
+        /// The actual value container of the XSeries.
+        /// </summary>
+        protected XSeriesElements xSeriesElements;
 
-    #region Methods
-    /// <summary>
-    /// Creates a deep copy of this object.
-    /// </summary>
-    public new XSeries Clone()
-    {
-      return (XSeries)DeepCopy();
-    }
+        #region Methods
+        /// <summary>
+        /// Creates a deep copy of this object.
+        /// </summary>
+        public new XSeries Clone()
+        {
+            return (XSeries)DeepCopy();
+        }
 
-    /// <summary>
-    /// Implements the deep copy of the object.
-    /// </summary>
-    protected override object DeepCopy()
-    {
-      XSeries xSeries = (XSeries)base.DeepCopy();
-      if (xSeries.xSeriesElements != null)
-      {
-        xSeries.xSeriesElements = xSeries.xSeriesElements.Clone();
-        xSeries.xSeriesElements.parent = xSeries;
-      }
-      return xSeries;
-    }
+        /// <summary>
+        /// Implements the deep copy of the object.
+        /// </summary>
+        protected override object DeepCopy()
+        {
+            XSeries xSeries = (XSeries)base.DeepCopy();
+            if (xSeries.xSeriesElements != null)
+            {
+                xSeries.xSeriesElements = xSeries.xSeriesElements.Clone();
+                xSeries.xSeriesElements.parent = xSeries;
+            }
+            return xSeries;
+        }
 
-    /// <summary>
-    /// Adds a blank to the XSeries.
-    /// </summary>
-    public void AddBlank()
-    {
-      this.xSeriesElements.AddBlank();
-    }
+        /// <summary>
+        /// Adds a blank to the XSeries.
+        /// </summary>
+        public void AddBlank()
+        {
+            this.xSeriesElements.AddBlank();
+        }
 
-    /// <summary>
-    /// Adds a value to the XSeries.
-    /// </summary>
-    public XValue Add(string value)
-    {
-      return this.xSeriesElements.Add(value);
-    }
+        /// <summary>
+        /// Adds a value to the XSeries.
+        /// </summary>
+        public XValue Add(string value)
+        {
+            return this.xSeriesElements.Add(value);
+        }
 
-    /// <summary>
-    /// Adds an array of values to the XSeries.
-    /// </summary>
-    public void Add(params string[] values)
-    {
-      this.xSeriesElements.Add(values);
-    }
+        /// <summary>
+        /// Adds an array of values to the XSeries.
+        /// </summary>
+        public void Add(params string[] values)
+        {
+            this.xSeriesElements.Add(values);
+        }
 
-    /// <summary>
-    /// Gets the enumerator.
-    /// </summary>
-    /// <returns></returns>
-    public IEnumerator GetEnumerator()
-    {
-      return this.xSeriesElements.GetEnumerator();
-    }
-    #endregion
+        /// <summary>
+        /// Gets the enumerator.
+        /// </summary>
+        /// <returns></returns>
+        public IEnumerator GetEnumerator()
+        {
+            return this.xSeriesElements.GetEnumerator();
+        }
+        #endregion
 
-    #region Properties
-    /// <summary>
-    /// Gets the number of xvalues actually contained in the xseries.
-    /// </summary>
-    public int Count
-    {
-      get {return this.xSeriesElements.Count;}
+        #region Properties
+        /// <summary>
+        /// Gets the number of xvalues actually contained in the xseries.
+        /// </summary>
+        public int Count
+        {
+            get { return this.xSeriesElements.Count; }
+        }
+        #endregion
     }
-    #endregion
-  }
 }

@@ -30,33 +30,32 @@
 // DEALINGS IN THE SOFTWARE.
 #endregion
 
-using System;
 
 namespace MigraDocCore.DocumentObjectModel.IO
 {
-  /// <summary>
-  /// Specifies the severity of a DDL reader diagnostic.
-  /// </summary>
-  public enum DdlErrorLevel
-  {
     /// <summary>
-    /// An unknown severity.
+    /// Specifies the severity of a DDL reader diagnostic.
     /// </summary>
-    None,
+    public enum DdlErrorLevel
+    {
+        /// <summary>
+        /// An unknown severity.
+        /// </summary>
+        None,
 
-    /// <summary>
-    /// An information diagnostic.
-    /// </summary>
-    Info,
+        /// <summary>
+        /// An information diagnostic.
+        /// </summary>
+        Info,
 
-    /// <summary>
-    /// A warning or suggestive diagnostic.
-    /// </summary>
-    Warning,
+        /// <summary>
+        /// A warning or suggestive diagnostic.
+        /// </summary>
+        Warning,
 
-    /// <summary>
-    /// An error diagnostic.
-    /// </summary>
-    Error,
-  }
+        /// <summary>
+        /// An error diagnostic.
+        /// </summary>
+        Error,
+    }
 }

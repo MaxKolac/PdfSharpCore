@@ -29,13 +29,13 @@
 
 // #??? Clean up
 
-using System;
-using System.Diagnostics;
-using System.Globalization;
-using System.ComponentModel;
 using PdfSharpCore.Fonts;
 using PdfSharpCore.Fonts.OpenType;
 using PdfSharpCore.Pdf;
+using System;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Globalization;
 
 namespace PdfSharpCore.Drawing
 {

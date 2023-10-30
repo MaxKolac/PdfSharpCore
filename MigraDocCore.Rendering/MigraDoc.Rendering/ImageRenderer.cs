@@ -28,15 +28,12 @@
 // DEALINGS IN THE SOFTWARE.
 #endregion
 
-using System;
-using System.IO;
-using System.Diagnostics;
-using MigraDocCore.DocumentObjectModel;
-using PdfSharpCore.Drawing;
 using MigraDocCore.DocumentObjectModel.Shapes;
 using MigraDocCore.Rendering.MigraDoc.Rendering.Resources;
+using PdfSharpCore.Drawing;
 using PdfSharpCore.Fonts;
-using static MigraDocCore.DocumentObjectModel.MigraDoc.DocumentObjectModel.Shapes.ImageSource;
+using System;
+using System.Diagnostics;
 
 namespace MigraDocCore.Rendering
 {

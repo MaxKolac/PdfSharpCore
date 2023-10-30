@@ -27,13 +27,13 @@
 // DEALINGS IN THE SOFTWARE.
 #endregion
 
+using PdfSharpCore.Drawing;
+using PdfSharpCore.Pdf.Advanced;
+using PdfSharpCore.Pdf.Internal;
+using PdfSharpCore.Pdf.IO;
 using System;
 using System.Diagnostics;
 using System.Globalization;
-using PdfSharpCore.Drawing;
-using PdfSharpCore.Pdf.Advanced;
-using PdfSharpCore.Pdf.IO;
-using PdfSharpCore.Pdf.Internal;
 
 namespace PdfSharpCore.Pdf
 {

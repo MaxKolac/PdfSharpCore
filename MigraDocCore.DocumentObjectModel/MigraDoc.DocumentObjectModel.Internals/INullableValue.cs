@@ -30,23 +30,17 @@
 // DEALINGS IN THE SOFTWARE.
 #endregion
 
-using System;
-using System.ComponentModel;
-using System.Collections;
-using System.Diagnostics;
-using System.Globalization;
-using System.Reflection;
 
 namespace MigraDocCore.DocumentObjectModel.Internals
 {
-  /// <summary>
-  /// Interface for simple nullable values like NInt, NString etc.
-  /// </summary>
-  internal interface INullableValue
-  {
-    object GetValue();
-    void SetValue(object value);
-    void SetNull();
-    bool IsNull { get;}
-  }
+    /// <summary>
+    /// Interface for simple nullable values like NInt, NString etc.
+    /// </summary>
+    internal interface INullableValue
+    {
+        object GetValue();
+        void SetValue(object value);
+        void SetNull();
+        bool IsNull { get; }
+    }
 }

@@ -31,13 +31,12 @@
 #endregion
 
 using MigraDocCore.DocumentObjectModel.Internals;
-using MigraDocCore.DocumentObjectModel.Visitors;
-using MigraDocCore.DocumentObjectModel.Tables;
-using MigraDocCore.DocumentObjectModel.Shapes.Charts;
 using MigraDocCore.DocumentObjectModel.Shapes;
-using MigraDocImage = MigraDocCore.DocumentObjectModel.Shapes.Image;
-using MigraDocCore.DocumentObjectModel.MigraDoc.DocumentObjectModel.Shapes;
+using MigraDocCore.DocumentObjectModel.Shapes.Charts;
+using MigraDocCore.DocumentObjectModel.Tables;
+using MigraDocCore.DocumentObjectModel.Visitors;
 using static MigraDocCore.DocumentObjectModel.MigraDoc.DocumentObjectModel.Shapes.ImageSource;
+using MigraDocImage = MigraDocCore.DocumentObjectModel.Shapes.Image;
 
 namespace MigraDocCore.DocumentObjectModel
 {
@@ -172,7 +171,7 @@ namespace MigraDocCore.DocumentObjectModel
         {
             MigraDocImage img = new MigraDocImage()
             {
-                Source = image,                
+                Source = image,
             };
             Add(img);
             return img;

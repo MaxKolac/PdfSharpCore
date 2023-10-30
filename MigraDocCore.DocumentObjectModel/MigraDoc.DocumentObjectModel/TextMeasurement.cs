@@ -30,9 +30,9 @@
 // DEALINGS IN THE SOFTWARE.
 #endregion
 
+using PdfSharpCore.Drawing;
 using System;
 using System.Diagnostics;
-using PdfSharpCore.Drawing;
 
 namespace MigraDocCore.DocumentObjectModel
 {
@@ -125,7 +125,8 @@ namespace MigraDocCore.DocumentObjectModel
         /// </summary>
         private XFont XFont
         {
-            get { 
+            get
+            {
                 if (this.xFont == null)
                 {
                     var style = XFontStyle.Regular;
@@ -142,7 +143,7 @@ namespace MigraDocCore.DocumentObjectModel
                 }
 
                 return this.xFont;
-             }
+            }
         }
 
         Font font;

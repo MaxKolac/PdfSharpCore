@@ -27,11 +27,11 @@
 // DEALINGS IN THE SOFTWARE.
 #endregion
 
-using System.Diagnostics;
+using PdfSharpCore.Drawing;
 using PdfSharpCore.Fonts;
 using PdfSharpCore.Fonts.OpenType;
-using PdfSharpCore.Drawing;
 using PdfSharpCore.Pdf.Filters;
+using System.Diagnostics;
 
 namespace PdfSharpCore.Pdf.Advanced
 {

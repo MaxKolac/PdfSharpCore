@@ -28,12 +28,11 @@
 // DEALINGS IN THE SOFTWARE.
 #endregion
 
+using PdfSharpCore.Drawing;
+using PdfSharpCore.Pdf.Filters;
 using System;
 using System.Diagnostics;
 using System.IO;
-using PdfSharpCore.Drawing;
-using PdfSharpCore.Drawing.Internal;
-using PdfSharpCore.Pdf.Filters;
 
 namespace PdfSharpCore.Pdf.Advanced
 {
@@ -205,8 +204,8 @@ namespace PdfSharpCore.Pdf.Advanced
                 }
                 bigHeader = infoHeaderSize == 108;
                 if (ReadWord(imageBits, 26) != 1 ||
-                  (!hasAlpha && ReadWord(imageBits, bigHeader?30:28) != components * bits ||
-                   hasAlpha && ReadWord(imageBits, bigHeader?30:28) != (components + 1) * bits) ||
+                  (!hasAlpha && ReadWord(imageBits, bigHeader ? 30 : 28) != components * bits ||
+                   hasAlpha && ReadWord(imageBits, bigHeader ? 30 : 28) != (components + 1) * bits) ||
                   bigHeader ? ReadWord(imageBits, 32) != 0 : ReadDWord(imageBits, 30) != 0)
                 {
                     throw new NotImplementedException("ReadTrueColorMemoryBitmap: unsupported format #3");

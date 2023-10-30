@@ -30,98 +30,95 @@
 
 #define CACHE_FONTS_
 
-using System;
-using System.Collections;
-using System.Text;
-using PdfSharpCore.Pdf;
-using PdfSharpCore.Drawing;
 using MigraDocCore.DocumentObjectModel;
+using PdfSharpCore.Drawing;
+using PdfSharpCore.Pdf;
 
 namespace MigraDocCore.Rendering
 {
-  /// <summary>
-  /// Helps measuring and handling fonts.
-  /// </summary>
-  internal class FontHandler
-  {
-#if DEBUG
-    internal static int CreateFontCounter;
-#endif
-
     /// <summary>
-    /// Converts an DOM Font to an XFont.
+    /// Helps measuring and handling fonts.
     /// </summary>
-    internal static XFont FontToXFont(Font font, XPrivateFontCollection pfc, 
-      PdfFontEncoding encoding)
+    internal class FontHandler
     {
-      XFont xFont = null;
-
-      // #PFC
-      XPdfFontOptions options = null;
-      options = new XPdfFontOptions(encoding);
-      XFontStyle style = GetXStyle(font);
-
-      if (xFont == null)
-        xFont = new XFont(font.Name, font.Size, style, options);
 #if DEBUG
-      CreateFontCounter++;
+        internal static int CreateFontCounter;
 #endif
-      return xFont;
-    }
 
-    internal static XFontStyle GetXStyle(Font font)
-    {
-      XFontStyle style = XFontStyle.Regular;
-      if (font.Bold)
-      {
-        if (font.Italic)
-          style = XFontStyle.BoldItalic;
-        else
-          style = XFontStyle.Bold;
-      }
-      else if (font.Italic)
-        style = XFontStyle.Italic;
+        /// <summary>
+        /// Converts an DOM Font to an XFont.
+        /// </summary>
+        internal static XFont FontToXFont(Font font, XPrivateFontCollection pfc,
+          PdfFontEncoding encoding)
+        {
+            XFont xFont = null;
 
-      return style;
-    }
+            // #PFC
+            XPdfFontOptions options = null;
+            options = new XPdfFontOptions(encoding);
+            XFontStyle style = GetXStyle(font);
 
-    internal static XUnit GetDescent(XFont font)
-    {
-      XUnit descent = font.Metrics.Descent;
-      descent *= font.Size;
-      descent /= font.FontFamily.GetEmHeight(font.Style);
-      return descent;
-    }
+            if (xFont == null)
+                xFont = new XFont(font.Name, font.Size, style, options);
+#if DEBUG
+            CreateFontCounter++;
+#endif
+            return xFont;
+        }
 
-    internal static XUnit GetAscent(XFont font)
-    {
-      XUnit ascent = font.Metrics.Ascent;
-      ascent *= font.Size;
-      ascent /= font.FontFamily.GetEmHeight(font.Style);
-      return ascent;
-    }
+        internal static XFontStyle GetXStyle(Font font)
+        {
+            XFontStyle style = XFontStyle.Regular;
+            if (font.Bold)
+            {
+                if (font.Italic)
+                    style = XFontStyle.BoldItalic;
+                else
+                    style = XFontStyle.Bold;
+            }
+            else if (font.Italic)
+                style = XFontStyle.Italic;
 
-    internal static double GetSubSuperScaling(XFont font)
-    {
-      return 0.8 * GetAscent(font) / font.GetHeight();
-    }
+            return style;
+        }
 
-    internal static XFont ToSubSuperFont(XFont font)
-    {
-      double size = font.Size * GetSubSuperScaling(font);
+        internal static XUnit GetDescent(XFont font)
+        {
+            XUnit descent = font.Metrics.Descent;
+            descent *= font.Size;
+            descent /= font.FontFamily.GetEmHeight(font.Style);
+            return descent;
+        }
 
-      // #PFC
-      return new XFont(font.Name, size, font.Style, font.PdfOptions);
-    }
+        internal static XUnit GetAscent(XFont font)
+        {
+            XUnit ascent = font.Metrics.Ascent;
+            ascent *= font.Size;
+            ascent /= font.FontFamily.GetEmHeight(font.Style);
+            return ascent;
+        }
 
-    internal static XBrush FontColorToXBrush(Font font)
-    {
+        internal static double GetSubSuperScaling(XFont font)
+        {
+            return 0.8 * GetAscent(font) / font.GetHeight();
+        }
+
+        internal static XFont ToSubSuperFont(XFont font)
+        {
+            double size = font.Size * GetSubSuperScaling(font);
+
+            // #PFC
+            return new XFont(font.Name, size, font.Style, font.PdfOptions);
+        }
+
+        internal static XBrush FontColorToXBrush(Font font)
+        {
 #if noCMYK
       return new XSolidBrush(XColor.FromArgb((int)font.Color.A, (int)font.Color.R, (int)font.Color.G, (int)font.Color.B));
 #else
-      return new XSolidBrush(ColorHelper.ToXColor(font.Color, font.Document.UseCmykColor));
+            return new XSolidBrush(ColorHelper.ToXColor(font.Color, font.Document.UseCmykColor));
 #endif
-    }
+        }
 
 #if CACHE_FONTS
     static XFont XFontFromCache(Font font, bool unicode, PdfFontEmbedding fontEmbedding)
@@ -146,5 +143,5 @@ namespace MigraDocCore.Rendering
 
     static Hashtable fontCache = new Hashtable();
 #endif
-  }
+    }
 }

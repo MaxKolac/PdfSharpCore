@@ -1,11 +1,8 @@
-﻿using MigraDocCore.Rendering;
-using System;
-using System.Collections.Generic;
+﻿using MigraDocCore.DocumentObjectModel;
+using MigraDocCore.Rendering;
 using System.Globalization;
-using System.Text;
 using System.Threading;
 using Xunit;
-using MigraDocCore.DocumentObjectModel;
 
 namespace PdfSharpCore.Test
 {

@@ -1,7 +1,7 @@
-﻿using System.IO;
-using PdfSharpCore.Pdf;
+﻿using PdfSharpCore.Pdf;
 using PdfSharpCore.Pdf.IO;
 using PdfSharpCore.Test.Helpers;
+using System.IO;
 using Xunit;
 
 namespace PdfSharpCore.Test
@@ -11,7 +11,7 @@ namespace PdfSharpCore.Test
         [Fact]
         public void CanMerge2Documents()
         {
-            var pdf1Path =  PathHelper.GetInstance().GetAssetPath("FamilyTree.pdf");
+            var pdf1Path = PathHelper.GetInstance().GetAssetPath("FamilyTree.pdf");
             var pdf2Path = PathHelper.GetInstance().GetAssetPath("test.pdf");
 
             var outputDocument = new PdfDocument();

@@ -27,12 +27,12 @@
 // DEALINGS IN THE SOFTWARE.
 #endregion
 
-using System;
-using System.Globalization;
-using System.Diagnostics;
-using System.Text;
-using System.IO;
 using PdfSharpCore.Internal;
+using System;
+using System.Diagnostics;
+using System.Globalization;
+using System.IO;
+using System.Text;
 
 #pragma warning disable 1591
 
@@ -67,7 +67,7 @@ namespace PdfSharpCore.Pdf.Content
         /// </summary>
         public CSymbol ScanNextToken()
         {
-            Again:
+        Again:
             ClearToken();
             char ch = MoveToNonWhiteSpace();
             switch (ch)
@@ -169,10 +169,10 @@ namespace PdfSharpCore.Pdf.Content
             {
                 // Look for '~>' because 'EI' may be part of the encoded image.
                 // currChar != Chars.EOF: Addresses issue #354 - malformed PDF that ends without closing an inline image
-                while (_currChar != Chars.EOF && ( _currChar != '~' || _nextChar != '>'))
+                while (_currChar != Chars.EOF && (_currChar != '~' || _nextChar != '>'))
                     ScanNextChar();
             }
-            
+
             // Look for 'EI'.
             // currChar != Chars.EOF: Addresses issue #354 - malformed PDF that ends without closing an inline image
             while (_currChar != Chars.EOF && (_currChar != 'E' || _nextChar != 'I'))
@@ -340,7 +340,7 @@ namespace PdfSharpCore.Pdf.Content
                 ch = (char)(chHi * 256 + chLo);
                 while (true)
                 {
-                    SkipChar:
+                SkipChar:
                     switch (ch)
                     {
                         case '(':
@@ -440,7 +440,7 @@ namespace PdfSharpCore.Pdf.Content
                 // 8-bit characters
                 while (true)
                 {
-                    SkipChar:
+                SkipChar:
                     switch (ch)
                     {
                         case '(':

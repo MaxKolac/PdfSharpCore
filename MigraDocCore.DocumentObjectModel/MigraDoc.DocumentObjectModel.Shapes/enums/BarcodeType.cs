@@ -30,26 +30,25 @@
 // DEALINGS IN THE SOFTWARE.
 #endregion
 
-using System;
 
 namespace MigraDocCore.DocumentObjectModel.Shapes
 {
-  /// <summary>
-  /// Specifies the type of the barcode.
-  /// </summary>
-  public enum BarcodeType
-  {
     /// <summary>
-    /// Barcode "Interleaved 2 of 5"
+    /// Specifies the type of the barcode.
     /// </summary>
-    Barcode25i,
-    /// <summary>
-    /// Barcode "3 of 9"
-    /// </summary>
-    Barcode39,
-    /// <summary>
-    /// Barcode "Code 128"
-    /// </summary>
-    Barcode128
-  }
+    public enum BarcodeType
+    {
+        /// <summary>
+        /// Barcode "Interleaved 2 of 5"
+        /// </summary>
+        Barcode25i,
+        /// <summary>
+        /// Barcode "3 of 9"
+        /// </summary>
+        Barcode39,
+        /// <summary>
+        /// Barcode "Code 128"
+        /// </summary>
+        Barcode128
+    }
 }

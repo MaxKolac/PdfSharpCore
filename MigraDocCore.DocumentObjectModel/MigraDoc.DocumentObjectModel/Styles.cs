@@ -30,14 +30,12 @@
 // DEALINGS IN THE SOFTWARE.
 #endregion
 
+using MigraDocCore.DocumentObjectModel.Internals;
+using MigraDocCore.DocumentObjectModel.MigraDoc.DocumentObjectModel.Resources;
+using MigraDocCore.DocumentObjectModel.Visitors;
+using PdfSharpCore.Fonts;
 using System;
 using System.Collections;
-using System.Diagnostics;
-using System.Reflection;
-using MigraDocCore.DocumentObjectModel.Internals;
-using MigraDocCore.DocumentObjectModel.Visitors;
-using MigraDocCore.DocumentObjectModel.MigraDoc.DocumentObjectModel.Resources;
-using PdfSharpCore.Fonts;
 
 namespace MigraDocCore.DocumentObjectModel
 {

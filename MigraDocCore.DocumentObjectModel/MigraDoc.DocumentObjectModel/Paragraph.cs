@@ -30,17 +30,12 @@
 // DEALINGS IN THE SOFTWARE.
 #endregion
 
-using System;
-using System.Diagnostics;
-using System.Reflection;
-using System.Collections;
-using MigraDocCore.DocumentObjectModel.Internals;
-using MigraDocCore.DocumentObjectModel.Visitors;
-using MigraDocCore.DocumentObjectModel.IO;
 using MigraDocCore.DocumentObjectModel.Fields;
+using MigraDocCore.DocumentObjectModel.Internals;
 using MigraDocCore.DocumentObjectModel.Shapes;
-using System.IO;
-using MigraDocCore.DocumentObjectModel.MigraDoc.DocumentObjectModel.Shapes;
+using MigraDocCore.DocumentObjectModel.Visitors;
+using System;
+using System.Collections;
 using static MigraDocCore.DocumentObjectModel.MigraDoc.DocumentObjectModel.Shapes.ImageSource;
 
 namespace MigraDocCore.DocumentObjectModel
@@ -337,7 +332,7 @@ namespace MigraDocCore.DocumentObjectModel
         public Image AddImage(IImageSource imageSource)
         {
             return this.Elements.AddImage(imageSource);
-        }      
+        }
 
         /// <summary>
         /// Adds a new Bookmark

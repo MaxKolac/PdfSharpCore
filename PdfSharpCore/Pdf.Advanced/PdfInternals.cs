@@ -27,12 +27,12 @@
 // DEALINGS IN THE SOFTWARE.
 #endregion
 
+using PdfSharpCore.Pdf.IO;
 using System;
 using System.Diagnostics;
+using System.IO;
 using System.Reflection;
 using System.Text;
-using System.IO;
-using PdfSharpCore.Pdf.IO;
 
 namespace PdfSharpCore.Pdf.Advanced
 {
@@ -126,7 +126,7 @@ namespace PdfSharpCore.Pdf.Advanced
         {
             PdfFormXObjectTable table = _document.FormTable;
             PdfImportedObjectTable iot = table.GetImportedObjectTable(externalObject.Owner);
-            PdfReference reference= iot[externalObject.ObjectID];
+            PdfReference reference = iot[externalObject.ObjectID];
             return reference == null ? null : reference.Value;
         }
 

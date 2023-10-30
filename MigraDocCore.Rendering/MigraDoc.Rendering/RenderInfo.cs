@@ -28,53 +28,52 @@
 // DEALINGS IN THE SOFTWARE.
 #endregion
 
-using System;
-using System.Diagnostics;
 using MigraDocCore.DocumentObjectModel;
 using PdfSharpCore.Drawing;
+using System.Diagnostics;
 
 namespace MigraDocCore.Rendering
 {
-  /// <summary>
-  /// Abstract base class for all classes that store rendering information.
-  /// </summary>
-  public abstract class RenderInfo
-  {
-    internal abstract FormatInfo FormatInfo
+    /// <summary>
+    /// Abstract base class for all classes that store rendering information.
+    /// </summary>
+    public abstract class RenderInfo
     {
-      get;
-    }
+        internal abstract FormatInfo FormatInfo
+        {
+            get;
+        }
 
-    public LayoutInfo LayoutInfo
-    {
-      get { return this.layoutInfo; }
-    }
-    LayoutInfo layoutInfo = new LayoutInfo();
+        public LayoutInfo LayoutInfo
+        {
+            get { return this.layoutInfo; }
+        }
+        LayoutInfo layoutInfo = new LayoutInfo();
 
-    public abstract DocumentObject DocumentObject
-    {
-      get;
-    }
+        public abstract DocumentObject DocumentObject
+        {
+            get;
+        }
 
-    internal virtual void RemoveEnding()
-    {
-      Debug.Assert(false, "Unexpected call of RemoveEnding");
-    }
+        internal virtual void RemoveEnding()
+        {
+            Debug.Assert(false, "Unexpected call of RemoveEnding");
+        }
 
-    internal static XUnit GetTotalHeight(RenderInfo[] renderInfos)
-    {
-      if (renderInfos == null || renderInfos.Length == 0)
-        return 0;
+        internal static XUnit GetTotalHeight(RenderInfo[] renderInfos)
+        {
+            if (renderInfos == null || renderInfos.Length == 0)
+                return 0;
 
-      int lastIdx = renderInfos.Length - 1;
-      RenderInfo firstRenderInfo = renderInfos[0];
-      RenderInfo lastRenderInfo = renderInfos[lastIdx];
-      LayoutInfo firstLayoutInfo = firstRenderInfo.LayoutInfo;
-      LayoutInfo lastLayoutInfo = lastRenderInfo.LayoutInfo;
-      XUnit top = firstLayoutInfo.ContentArea.Y - firstLayoutInfo.MarginTop;
-      XUnit bottom = lastLayoutInfo.ContentArea.Y + lastLayoutInfo.ContentArea.Height;
-      bottom += lastLayoutInfo.MarginBottom;
-      return bottom - top;
+            int lastIdx = renderInfos.Length - 1;
+            RenderInfo firstRenderInfo = renderInfos[0];
+            RenderInfo lastRenderInfo = renderInfos[lastIdx];
+            LayoutInfo firstLayoutInfo = firstRenderInfo.LayoutInfo;
+            LayoutInfo lastLayoutInfo = lastRenderInfo.LayoutInfo;
+            XUnit top = firstLayoutInfo.ContentArea.Y - firstLayoutInfo.MarginTop;
+            XUnit bottom = lastLayoutInfo.ContentArea.Y + lastLayoutInfo.ContentArea.Height;
+            bottom += lastLayoutInfo.MarginBottom;
+            return bottom - top;
+        }
     }
-  }
 }

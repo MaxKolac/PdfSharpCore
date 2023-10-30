@@ -30,17 +30,16 @@
 // DEALINGS IN THE SOFTWARE.
 #endregion
 
-using System;
 
 namespace MigraDocCore.DocumentObjectModel.Tables
 {
-  /// <summary>
-  /// Specifies the vertical alignment of the cell's content.
-  /// </summary>
-  public enum VerticalAlignment
-  {
-    Top,
-    Center,
-    Bottom
-  }
+    /// <summary>
+    /// Specifies the vertical alignment of the cell's content.
+    /// </summary>
+    public enum VerticalAlignment
+    {
+        Top,
+        Center,
+        Bottom
+    }
 }

@@ -28,15 +28,14 @@
 // DEALINGS IN THE SOFTWARE.
 #endregion
 
-using System;
 
 namespace MigraDocCore.Rendering
 {
-  internal enum VerticalReference
-  {
-    PreviousElement = 0, //Default
-    AreaBoundary,
-    PageMargin,
-    Page
-  }
+    internal enum VerticalReference
+    {
+        PreviousElement = 0, //Default
+        AreaBoundary,
+        PageMargin,
+        Page
+    }
 }

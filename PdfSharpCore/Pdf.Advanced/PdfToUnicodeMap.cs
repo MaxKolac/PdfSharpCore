@@ -27,12 +27,12 @@
 // DEALINGS IN THE SOFTWARE.
 #endregion
 
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.IO;
 using PdfSharpCore.Fonts;
 using PdfSharpCore.Pdf.Filters;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Text;
 
 namespace PdfSharpCore.Pdf.Advanced
 {

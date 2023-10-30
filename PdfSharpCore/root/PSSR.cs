@@ -27,13 +27,13 @@
 // DEALINGS IN THE SOFTWARE.
 #endregion
 
-using System;
-using System.Diagnostics;
-using System.Resources;
-using System.Reflection;
 using PdfSharpCore.Drawing;
 using PdfSharpCore.Internal;
 using PdfSharpCore.Pdf;
+using System;
+using System.Diagnostics;
+using System.Reflection;
+using System.Resources;
 
 #pragma warning disable 1591
 

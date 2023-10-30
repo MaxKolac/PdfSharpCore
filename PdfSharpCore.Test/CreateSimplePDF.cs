@@ -1,7 +1,4 @@
-﻿using System;
-using System.IO;
-using System.Text;
-using FluentAssertions;
+﻿using FluentAssertions;
 using PdfSharpCore.Drawing;
 using PdfSharpCore.Pdf;
 using PdfSharpCore.Test.Helpers;
@@ -9,6 +6,8 @@ using PdfSharpCore.Utils;
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.PixelFormats;
 using SixLabors.ImageSharp.Processing;
+using System.IO;
+using System.Text;
 using Xunit;
 
 namespace PdfSharpCore.Test

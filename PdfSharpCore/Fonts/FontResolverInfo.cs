@@ -27,10 +27,10 @@
 // DEALINGS IN THE SOFTWARE.
 #endregion
 
+using PdfSharpCore.Drawing;
 using System;
 using System.Diagnostics;
 using System.Globalization;
-using PdfSharpCore.Drawing;
 
 namespace PdfSharpCore.Fonts
 {

@@ -1,7 +1,7 @@
-﻿using System.IO;
-using FluentAssertions;
+﻿using FluentAssertions;
 using PdfSharpCore.Drawing;
 using PdfSharpCore.Pdf;
+using System.IO;
 using Xunit;
 
 namespace PdfSharpCore.Test.Outlines
@@ -35,7 +35,7 @@ namespace PdfSharpCore.Test.Outlines
             }
 
             document.Outlines.Count.Should().Be(1);
-            
+
             using var ms = new MemoryStream();
             document.Save(ms);
             ms.ToArray().Length.Should().BeGreaterThan(1);

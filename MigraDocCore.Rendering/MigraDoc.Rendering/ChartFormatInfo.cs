@@ -28,22 +28,21 @@
 // DEALINGS IN THE SOFTWARE.
 #endregion
 
-using System;
 using PdfSharpCore.Charting;
 
 namespace MigraDocCore.Rendering
 {
-  /// <summary>
-  /// Formatting information for a chart.
-  /// </summary>
-  internal class ChartFormatInfo : ShapeFormatInfo
-  {
-    internal ChartFrame chartFrame;
-    internal FormattedTextArea formattedHeader;
-    internal FormattedTextArea formattedLeft;
-    internal FormattedTextArea formattedTop;
-    internal FormattedTextArea formattedBottom;
-    internal FormattedTextArea formattedRight;
-    internal FormattedTextArea formattedFooter;
-  }
+    /// <summary>
+    /// Formatting information for a chart.
+    /// </summary>
+    internal class ChartFormatInfo : ShapeFormatInfo
+    {
+        internal ChartFrame chartFrame;
+        internal FormattedTextArea formattedHeader;
+        internal FormattedTextArea formattedLeft;
+        internal FormattedTextArea formattedTop;
+        internal FormattedTextArea formattedBottom;
+        internal FormattedTextArea formattedRight;
+        internal FormattedTextArea formattedFooter;
+    }
 }

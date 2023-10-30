@@ -1,9 +1,9 @@
-﻿using System.IO;
-using System.Text;
-using FluentAssertions;
+﻿using FluentAssertions;
 using PdfSharpCore.Pdf;
 using PdfSharpCore.Pdf.IO;
 using PdfSharpCore.Test.Helpers;
+using System.IO;
+using System.Text;
 using Xunit;
 
 namespace PdfSharpCore.Test.IO

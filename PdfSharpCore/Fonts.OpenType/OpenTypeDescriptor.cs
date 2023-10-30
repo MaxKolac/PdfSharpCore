@@ -27,11 +27,11 @@
 // DEALINGS IN THE SOFTWARE.
 #endregion
 
+using PdfSharpCore.Drawing;
+using PdfSharpCore.Pdf.Internal;
 using System;
 using System.Diagnostics;
 using System.Text;
-using PdfSharpCore.Pdf.Internal;
-using PdfSharpCore.Drawing;
 
 namespace PdfSharpCore.Fonts.OpenType
 {

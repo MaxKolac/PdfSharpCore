@@ -27,42 +27,41 @@
 // DEALINGS IN THE SOFTWARE.
 #endregion
 
-using System;
 
 namespace PdfSharpCore.Charting
 {
-  /// <summary>
-  /// Specifies the underline type for the font.
-  /// </summary>
-  public enum Underline
-  {
     /// <summary>
-    /// 
+    /// Specifies the underline type for the font.
     /// </summary>
-    None,
-    /// <summary>
-    /// 
-    /// </summary>
-    Single,
-    /// <summary>
-    /// 
-    /// </summary>
-    Words,
-    /// <summary>
-    /// 
-    /// </summary>
-    Dotted,
-    /// <summary>
-    /// 
-    /// </summary>
-    Dash,
-    /// <summary>
-    /// 
-    /// </summary>
-    DotDash,
-    /// <summary>
-    /// 
-    /// </summary>
-    DotDotDash,
-  }
+    public enum Underline
+    {
+        /// <summary>
+        /// 
+        /// </summary>
+        None,
+        /// <summary>
+        /// 
+        /// </summary>
+        Single,
+        /// <summary>
+        /// 
+        /// </summary>
+        Words,
+        /// <summary>
+        /// 
+        /// </summary>
+        Dotted,
+        /// <summary>
+        /// 
+        /// </summary>
+        Dash,
+        /// <summary>
+        /// 
+        /// </summary>
+        DotDash,
+        /// <summary>
+        /// 
+        /// </summary>
+        DotDotDash,
+    }
 }

@@ -27,9 +27,9 @@
 // DEALINGS IN THE SOFTWARE.
 #endregion
 
+using PdfSharpCore.Internal;
 using System.Diagnostics;
 using System.Globalization;
-using PdfSharpCore.Internal;
 
 namespace PdfSharpCore.Drawing
 {

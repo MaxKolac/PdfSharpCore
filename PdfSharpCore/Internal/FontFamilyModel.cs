@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using PdfSharpCore.Drawing;
+﻿using PdfSharpCore.Drawing;
+using System.Collections.Generic;
 
 namespace PdfSharpCore.Internal
 {

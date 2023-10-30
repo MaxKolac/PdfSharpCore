@@ -28,31 +28,30 @@
 // DEALINGS IN THE SOFTWARE.
 #endregion
 
-using System;
 using MigraDocCore.DocumentObjectModel;
 using MigraDocCore.DocumentObjectModel.Tables;
 
 namespace MigraDocCore.Rendering
 {
-  /// <summary>
-  /// Rendering information for tables.
-  /// </summary>
-  internal class TableRenderInfo : RenderInfo
-  {
-    internal TableRenderInfo()
+    /// <summary>
+    /// Rendering information for tables.
+    /// </summary>
+    internal class TableRenderInfo : RenderInfo
     {
-    }
+        internal TableRenderInfo()
+        {
+        }
 
-    internal override FormatInfo FormatInfo
-    {
-      get { return this.formatInfo; }
-    }
-    private TableFormatInfo formatInfo = new TableFormatInfo();
+        internal override FormatInfo FormatInfo
+        {
+            get { return this.formatInfo; }
+        }
+        private TableFormatInfo formatInfo = new TableFormatInfo();
 
-    public override DocumentObject DocumentObject
-    {
-      get { return this.table; }
+        public override DocumentObject DocumentObject
+        {
+            get { return this.table; }
+        }
+        internal Table table;
     }
-    internal Table table;
-  }
 }

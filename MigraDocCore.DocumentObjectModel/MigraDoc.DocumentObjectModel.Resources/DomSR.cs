@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
-using System.Text;
 using System.Text.RegularExpressions;
 
 namespace MigraDocCore.DocumentObjectModel.MigraDoc.DocumentObjectModel.Resources
@@ -11,7 +8,7 @@ namespace MigraDocCore.DocumentObjectModel.MigraDoc.DocumentObjectModel.Resource
     {
         internal static string GetString(DomMsgID id)
         {
-            return (string)typeof(AppResources).GetProperties().Where(x => x.Name == id.ToString() && x.PropertyType == typeof(string)).FirstOrDefault()?.GetValue(null); 
+            return (string)typeof(AppResources).GetProperties().Where(x => x.Name == id.ToString() && x.PropertyType == typeof(string)).FirstOrDefault()?.GetValue(null);
         }
 
         internal static string FormatMessage(DomMsgID id, params object[] args)

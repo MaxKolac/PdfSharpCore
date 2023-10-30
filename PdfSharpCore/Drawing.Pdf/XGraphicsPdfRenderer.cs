@@ -29,16 +29,16 @@
 
 #define ITALIC_SIMULATION
 
-using System;
-using System.Diagnostics;
-using System.Globalization;
-using System.Collections.Generic;
-using System.Text;
 using PdfSharpCore.Fonts.OpenType;
 using PdfSharpCore.Internal;
 using PdfSharpCore.Pdf;
-using PdfSharpCore.Pdf.Internal;
 using PdfSharpCore.Pdf.Advanced;
+using PdfSharpCore.Pdf.Internal;
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Globalization;
+using System.Text;
 
 // ReSharper disable RedundantNameQualifier
 // ReSharper disable CompareOfFloatsByEqualityOperator

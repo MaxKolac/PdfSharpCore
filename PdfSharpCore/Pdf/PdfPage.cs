@@ -27,14 +27,14 @@
 // DEALINGS IN THE SOFTWARE.
 #endregion
 
-using System;
-using System.Diagnostics;
-using System.Globalization;
-using System.ComponentModel;
-using PdfSharpCore.Pdf.IO;
 using PdfSharpCore.Drawing;
 using PdfSharpCore.Pdf.Advanced;
 using PdfSharpCore.Pdf.Annotations;
+using PdfSharpCore.Pdf.IO;
+using System;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Globalization;
 
 namespace PdfSharpCore.Pdf
 {
@@ -90,7 +90,7 @@ namespace PdfSharpCore.Pdf
                 // at System.Globalization.RegionInfo..ctor
                 Size = PageSize.A4;
             }
-            
+
 #pragma warning disable 168
             // Force creation of MediaBox object by invoking property
             PdfRectangle rect = MediaBox;

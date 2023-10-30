@@ -30,18 +30,17 @@
 // DEALINGS IN THE SOFTWARE.
 #endregion
 
-using System;
 
 namespace MigraDocCore.DocumentObjectModel
 {
-  /// <summary>
-  /// Specifies the alignment of a paragraph.
-  /// </summary>
-  public enum ParagraphAlignment
-  {
-    Left,
-    Center,
-    Right,
-    Justify,
-  }
+    /// <summary>
+    /// Specifies the alignment of a paragraph.
+    /// </summary>
+    public enum ParagraphAlignment
+    {
+        Left,
+        Center,
+        Right,
+        Justify,
+    }
 }

@@ -27,10 +27,10 @@
 // DEALINGS IN THE SOFTWARE.
 #endregion
 
+using PdfSharpCore.Pdf.Advanced;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using PdfSharpCore.Pdf.Advanced;
 
 namespace PdfSharpCore.Pdf.AcroForms
 {

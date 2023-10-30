@@ -27,8 +27,8 @@
 // DEALINGS IN THE SOFTWARE.
 #endregion
 
-using System.Globalization;
 using PdfSharpCore.Pdf.IO;
+using System.Globalization;
 
 namespace PdfSharpCore.Pdf
 {

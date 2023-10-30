@@ -30,15 +30,11 @@
 // DEALINGS IN THE SOFTWARE.
 #endregion
 
-using System;
-using System.Diagnostics;
-using System.Reflection;
-using MigraDocCore.DocumentObjectModel.IO;
 using MigraDocCore.DocumentObjectModel.Internals;
-using MigraDocCore.DocumentObjectModel.Visitors;
 using MigraDocCore.DocumentObjectModel.Shapes;
 using MigraDocCore.DocumentObjectModel.Shapes.Charts;
-using MigraDocCore.DocumentObjectModel.MigraDoc.DocumentObjectModel.Shapes;
+using MigraDocCore.DocumentObjectModel.Visitors;
+using System;
 using static MigraDocCore.DocumentObjectModel.MigraDoc.DocumentObjectModel.Shapes.ImageSource;
 
 namespace MigraDocCore.DocumentObjectModel.Tables
@@ -336,7 +332,8 @@ namespace MigraDocCore.DocumentObjectModel.Tables
         /// <summary>
         /// Specifies if the Cell should be rendered as a rounded corner.
         /// </summary>
-        public RoundedCorner RoundedCorner {
+        public RoundedCorner RoundedCorner
+        {
             get { return (RoundedCorner)this.roundedCorner.Value; }
             set { this.roundedCorner.Value = (int)value; }
         }

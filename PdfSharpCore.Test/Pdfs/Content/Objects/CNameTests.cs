@@ -1,6 +1,6 @@
-﻿using System;
-using FluentAssertions;
+﻿using FluentAssertions;
 using PdfSharpCore.Pdf.Content.Objects;
+using System;
 using Xunit;
 
 namespace PdfSharpCore.Test.Pdfs.Content.Objects

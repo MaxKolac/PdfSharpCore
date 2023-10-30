@@ -28,26 +28,24 @@
 // DEALINGS IN THE SOFTWARE.
 #endregion
 
-using System;
 using MigraDocCore.DocumentObjectModel;
-using PdfSharpCore.Drawing;
 using MigraDocCore.DocumentObjectModel.Shapes;
 
 namespace MigraDocCore.Rendering
 {
-  /// <summary>
-  /// Rendering information for shapes.
-  /// </summary>
-  internal abstract class ShapeRenderInfo : RenderInfo
-  {
-    internal ShapeRenderInfo()
+    /// <summary>
+    /// Rendering information for shapes.
+    /// </summary>
+    internal abstract class ShapeRenderInfo : RenderInfo
     {
-    }
+        internal ShapeRenderInfo()
+        {
+        }
 
-    public override DocumentObject DocumentObject
-    {
-      get { return this.shape; }
+        public override DocumentObject DocumentObject
+        {
+            get { return this.shape; }
+        }
+        internal Shape shape;
     }
-    internal Shape shape;
-  }
 }

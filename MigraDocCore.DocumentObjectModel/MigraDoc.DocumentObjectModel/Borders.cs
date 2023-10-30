@@ -30,13 +30,9 @@
 // DEALINGS IN THE SOFTWARE.
 #endregion
 
-using System;
-using System.Diagnostics;
-using System.Reflection;
-using System.Globalization;
-using System.Collections;
-using System.ComponentModel;
 using MigraDocCore.DocumentObjectModel.Internals;
+using System;
+using System.Collections;
 
 namespace MigraDocCore.DocumentObjectModel
 {

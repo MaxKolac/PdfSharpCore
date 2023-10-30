@@ -27,15 +27,15 @@
 // DEALINGS IN THE SOFTWARE.
 #endregion
 
+using PdfSharpCore.Pdf.Advanced;
+using PdfSharpCore.Pdf.Internal;
+using PdfSharpCore.Pdf.Security;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Globalization;
-using System.Text;
 using System.IO;
-using PdfSharpCore.Pdf.Advanced;
-using PdfSharpCore.Pdf.Security;
-using PdfSharpCore.Pdf.Internal;
+using System.Text;
 
 namespace PdfSharpCore.Pdf.IO
 {
@@ -57,7 +57,7 @@ namespace PdfSharpCore.Pdf.IO
         public void Close(bool closeUnderlyingStream)
         {
             if (_stream != null && closeUnderlyingStream)
-            _stream.Dispose();
+                _stream.Dispose();
             _stream = null;
         }
 

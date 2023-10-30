@@ -30,33 +30,32 @@
 // DEALINGS IN THE SOFTWARE.
 #endregion
 
-using System;
 
 namespace MigraDocCore.DocumentObjectModel.Fields
 {
-  /// <summary>
-  /// Specifies the information to be shown in the field.
-  /// </summary>
-  public enum InfoFieldType
-  {
     /// <summary>
-    /// Specifies the title for the document.
+    /// Specifies the information to be shown in the field.
     /// </summary>
-    Title,
-    
-    /// <summary>
-    /// Specifies the author for the document.
-    /// </summary>
-    Author,
-    
-    /// <summary>
-    /// Specifies the keywords for the document.
-    /// </summary>
-    Keywords,
-    
-    /// <summary>
-    /// Specifies the subject for the document.
-    /// </summary>
-    Subject
-  }
+    public enum InfoFieldType
+    {
+        /// <summary>
+        /// Specifies the title for the document.
+        /// </summary>
+        Title,
+
+        /// <summary>
+        /// Specifies the author for the document.
+        /// </summary>
+        Author,
+
+        /// <summary>
+        /// Specifies the keywords for the document.
+        /// </summary>
+        Keywords,
+
+        /// <summary>
+        /// Specifies the subject for the document.
+        /// </summary>
+        Subject
+    }
 }

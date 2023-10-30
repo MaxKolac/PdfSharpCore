@@ -1,12 +1,12 @@
-using SixLabors.ImageSharp;
-using SixLabors.ImageSharp.PixelFormats;
 using MigraDocCore.DocumentObjectModel.MigraDoc.DocumentObjectModel.Shapes;
-using System;
-using System.IO;
+using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.Formats;
 using SixLabors.ImageSharp.Formats.Bmp;
 using SixLabors.ImageSharp.Formats.Jpeg;
 using SixLabors.ImageSharp.Formats.Png;
+using SixLabors.ImageSharp.PixelFormats;
+using System;
+using System.IO;
 
 namespace PdfSharpCore.Utils
 {
@@ -30,7 +30,7 @@ namespace PdfSharpCore.Utils
         {
             var image = Image.Load<TPixel>(path);
             var imgFormat = image.Metadata.DecodedImageFormat;
-            return new ImageSharpImageSourceImpl<TPixel>(path, image, (int) quality, imgFormat is PngFormat);
+            return new ImageSharpImageSourceImpl<TPixel>(path, image, (int)quality, imgFormat is PngFormat);
         }
 
         protected override IImageSource FromStreamImpl(string name, Func<Stream> imageStream, int? quality = 75)

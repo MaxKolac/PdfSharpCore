@@ -15,6 +15,7 @@ MigraDocCore.Rendering was ported from MigraDoc version 1.32</Description>
     <summary>MigraDocCore.Rendering for .NET Core</summary>
     <IsTrimmable>true</IsTrimmable>
     <EnableTrimAnalyzer>true</EnableTrimAnalyzer>
+    <BaseOutputPath></BaseOutputPath>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

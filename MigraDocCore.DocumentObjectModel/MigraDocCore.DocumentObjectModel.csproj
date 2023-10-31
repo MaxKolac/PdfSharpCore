@@ -11,8 +11,11 @@
     <RepositoryUrl>https://github.com/ststeiger/PdfSharpCore</RepositoryUrl>
     <PackageReleaseNotes>MigraDocCore.DocumentObjectModel was ported from MigraDoc version 1.32</PackageReleaseNotes>
     <summary>MigraDocCore.DocumentObjectModel for .NET Core</summary>
-    <IsTrimmable>true</IsTrimmable>
-    <EnableTrimAnalyzer>false</EnableTrimAnalyzer>
+	  
+	<!-- The problematic fun stuff -->
+	<PublishTrimmed>true</PublishTrimmed>
+	<TrimMode>partial</TrimMode>
+	<SuppressTrimAnalysisWarnings>false</SuppressTrimAnalysisWarnings>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

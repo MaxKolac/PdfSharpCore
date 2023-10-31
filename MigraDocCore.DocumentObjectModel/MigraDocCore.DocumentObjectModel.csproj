@@ -13,8 +13,7 @@
     <summary>MigraDocCore.DocumentObjectModel for .NET Core</summary>
 	  
 	<!-- The problematic fun stuff -->
-	<PublishTrimmed>true</PublishTrimmed>
-	<TrimMode>partial</TrimMode>
+	<PublishTrimmed>false</PublishTrimmed>
 	<SuppressTrimAnalysisWarnings>false</SuppressTrimAnalysisWarnings>
   </PropertyGroup>
 

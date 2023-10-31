@@ -13,9 +13,9 @@ MigraDocCore.Rendering was ported from MigraDoc version 1.32</Description>
     <RepositoryUrl>https://github.com/ststeiger/PdfSharpCore</RepositoryUrl>
     <PackageReleaseNotes>MigraDocCore.Rendering was ported from MigraDoc version 1.32</PackageReleaseNotes>
     <summary>MigraDocCore.Rendering for .NET Core</summary>
-    <IsTrimmable>true</IsTrimmable>
-    <EnableTrimAnalyzer>true</EnableTrimAnalyzer>
     <BaseOutputPath></BaseOutputPath>
+	  
+	<PublishTrimmed>false</PublishTrimmed>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

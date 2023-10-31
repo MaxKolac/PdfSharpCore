@@ -11,8 +11,9 @@
     <RepositoryUrl>https://github.com/ststeiger/PdfSharpCore</RepositoryUrl>
     <PackageReleaseNotes>PdfSharpCore.Charting was ported from PdfSharp</PackageReleaseNotes>
     <summary>PdfSharpCore.Charting for .NET Core</summary>
-    <IsTrimmable>true</IsTrimmable>
-    <EnableTrimAnalyzer>true</EnableTrimAnalyzer>
+	<BaseOutputPath></BaseOutputPath>
+
+	<PublishTrimmed>false</PublishTrimmed>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

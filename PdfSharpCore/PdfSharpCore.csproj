@@ -18,6 +18,8 @@ PdfSharpCore is a partial port of PdfSharp.Xamarin for .NET Core Additionally Mi
 	<BaseOutputPath></BaseOutputPath>
 
 	<PublishTrimmed>false</PublishTrimmed>
+	<IsTrimmable>false</IsTrimmable>
+	<IsAotCompatible>false</IsAotCompatible>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

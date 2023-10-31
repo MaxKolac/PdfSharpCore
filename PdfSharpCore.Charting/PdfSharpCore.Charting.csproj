@@ -13,7 +13,9 @@
     <summary>PdfSharpCore.Charting for .NET Core</summary>
 	<BaseOutputPath></BaseOutputPath>
 
-	<PublishTrimmed>false</PublishTrimmed>
+	  <PublishTrimmed>false</PublishTrimmed>
+	  <IsTrimmable>false</IsTrimmable>
+	  <IsAotCompatible>false</IsAotCompatible>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
